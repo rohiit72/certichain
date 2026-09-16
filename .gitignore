@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Secrets ###
+*.p12
+*.jks
+*.pfx
+.env
+.env.*
