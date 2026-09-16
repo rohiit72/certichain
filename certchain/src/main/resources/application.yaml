@@ -19,3 +19,9 @@ spring:
 
 server:
   port: 6969
+
+
+certichain:
+  keystore:
+    path: ./keystore/ssdcve.p12
+    password: ${SSDCVE_KEYSTORE_PASSWORD}
