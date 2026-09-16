@@ -21,7 +21,16 @@ server:
   port: 6969
 
 
+
+
+
 certichain:
   keystore:
     path: ./keystore/ssdcve.p12
-    password: ${SSDCVE_KEYSTORE_PASSWORD}
+    password: ${SSDCVE_KEYSTORE_PASSWORD:change-me-keystore-password}
+  jwt:
+    secret: ${SSDCVE_JWT_SECRET:change-me-in-production-minimum-32-bytes-long!!!}
+    access-token-ttl-minutes: 60
+  auth:
+    cookie-secure: false
+    refresh-token-ttl-days: 7
