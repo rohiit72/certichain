@@ -12,5 +12,17 @@ services:
     volumes:
       - certichain_postgres_data:/var/lib/postgresql/data
 
+  ipfs:
+    image: ipfs/kubo:v0.36.0
+    container_name: certichain-ipfs
+    restart: unless-stopped
+    ports:
+      - "4001:4001"
+      - "5001:5001"
+      - "8080:8080"
+    volumes:
+      - certichain_ipfs_data:/data/ipfs
+
 volumes:
   certichain_postgres_data:
+  certichain_ipfs_data:
